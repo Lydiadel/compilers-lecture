@@ -13,6 +13,9 @@ time            { return TIME; }
 name            {return NAME;}
 weather            {return WEATHER;}
 feeling            {return FEELING;}
+action            {return ACTION;}
+what[' ']should[' ']I[' ']do { return ACTION; }
+what[' ']should[' ']i[' ']do { return ACTION; }
 how[' ']are[' ']you { return FEELING; }
 how[' ']are[' ']you[' ']feeling  { return FEELING; }
 what[' ']is[' ']the[' ']weather  { return WEATHER; }
