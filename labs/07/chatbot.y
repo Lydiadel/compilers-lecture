@@ -17,7 +17,7 @@ size_t write_callback(void *ptr, size_t size, size_t nmemb, void *stream) {
 }
 %}
 
-%token HELLO GOODBYE TIME NAME WEATHER FEELING
+%token HELLO GOODBYE TIME NAME WEATHER FEELING ACTION
 
 %%
 
@@ -27,6 +27,7 @@ chatbot : greeting
         | introduction
         | weather_query
         | feeling
+        | action
         ;
 
 greeting : HELLO { printf("Chatbot: Hello! How can I help you today?\n"); }
@@ -47,6 +48,9 @@ introduction : NAME { printf("Chatbot: My name is Rata\n") ;}
 weather_query : WEATHER { fetch_weather(); }
               ;
 feeling : FEELING {  randomFeeling(); }
+        ;
+
+action : ACTION { printf("You should take some fresh air.\n") ;}
         ;
 %%
 
