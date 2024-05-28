@@ -44,7 +44,8 @@
      TIME = 260,
      NAME = 261,
      WEATHER = 262,
-     FEELING = 263
+     FEELING = 263,
+     ACTION = 264
    };
 #endif
 /* Tokens.  */
@@ -54,6 +55,7 @@
 #define NAME 261
 #define WEATHER 262
 #define FEELING 263
+#define ACTION 264
 
 
 
